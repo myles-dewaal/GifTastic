@@ -9,30 +9,19 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <!-- button exmples -->
-                <p class="examples"></p>
+    <h1>Movie Search</h1>
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-9">
-                <div class="images"></div>
-                <p class="rating"></p>
-            </div>
-            <div class="col-3">
-                <form>
-                    <div class="form-group">
-                        <label for="giftext">Search Animal Gifs</label>
-                        <input type="text" class="form-control" id="gifsearch" placeholder="Enter Text">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <div id="buttons-view"></div>
+
+    <form id="giphy-form">
+      <label for="giphy-input">Serch Giphy</label>
+      <input type="text" id="giphy-input">
+      <br>
+
+      <input id="add-movie" type="submit" value="Search-Giphy">
+    </form>
+
+    <div id="giphy-view"></div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -44,6 +33,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script src="Assets/Javascript/app.js"></script>
 </body>
 
 </html>
