@@ -4,14 +4,14 @@ $("#add-buttons").on("click", "button", function () {
 
     var input = $(this).attr("data-input");
 
-    var queryUrl = "api.giphy.com/v1/gifs/search?q=" + input + "&api_key=kJaS17Eda10rpHTFlH3oIGvInPsttnMx=10";
+    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=tAFMpojKZDhnQcCHvE5qfe6jzMgFRliX&max=10";
 
     $.ajax({
         url: queryUrl,
         method: "GET"
     })
         .then(function (response) {
-            console.log(queryURL);
+            console.log(queryUrl);
 
             console.log(response);
 
@@ -55,7 +55,8 @@ $("#add-buttons").on("click", "button", function () {
 });
 
 function showButtons() {
-    $("#add-buttons").empty();
+    $("#animal-input").val("")
+    $("#add-buttons").empty(); 
 
     for (var i = 0; i < animals.length; i++) {
         var b = $("<button>");
@@ -64,7 +65,7 @@ function showButtons() {
         b.text(animals[i]);
 
 
-        $("#add-buttons").append(b); 
+        $("#add-buttons").prepend(b); 
     }                                 
 }
 
